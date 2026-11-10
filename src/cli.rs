@@ -7,7 +7,7 @@ use std::path::PathBuf;
 #[command(
     name = "tokencrop",
     author = "Agnet Software Corp. <ceo@agnetsoftware.corp>",
-    version = "0.1.0",
+    version,
     about = "⚡ Ultra-fast codebase context packer & token optimizer for LLMs",
     long_about = "tokencrop recursively scans a repository, honors .gitignore, prunes comments & whitespace,\ncalculates BPE token estimates, and generates structured LLM context in XML, Markdown, or JSON."
 )]

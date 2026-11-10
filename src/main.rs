@@ -1,11 +1,11 @@
 //! tokencrop — Ultra-fast codebase context packer & token optimizer for LLMs
 //! Developed by Agnet Software Corp.
 
-mod cli;
-mod crawler;
-mod formatter;
-mod stripper;
-mod tokenizer;
+use tokencrop::cli;
+use tokencrop::crawler;
+use tokencrop::formatter;
+use tokencrop::stripper;
+use tokencrop::tokenizer;
 
 use anyhow::Result;
 use clap::Parser;
@@ -19,7 +19,7 @@ fn format_number(n: usize) -> String {
     let mut result = String::new();
     let chars: Vec<char> = s.chars().collect();
     for (idx, &ch) in chars.iter().enumerate() {
-        if idx > 0 && (chars.len() - idx) % 3 == 0 {
+        if idx > 0 && (chars.len() - idx).is_multiple_of(3) {
             result.push(',');
         }
         result.push(ch);

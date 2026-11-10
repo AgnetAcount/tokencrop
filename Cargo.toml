@@ -1,6 +1,6 @@
 [package]
 name = "tokencrop"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["Agnet Software Corp. <ceo@agnetsoftware.corp>"]
 description = "Ultra-fast codebase context packer, comment stripper, and token optimizer for LLMs"
